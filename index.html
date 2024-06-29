@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win-7 Table</title>
+  <link rel="stylesheet" href="https://unpkg.com/7.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body class="us-activity-page">
+  <div id="desktop">
+    <div id="computer" class="computer icon" data-label="Computer"></div>
+    <div id="test-file" class="test-file icon" data-label="Test.txt"></div>
+    <div id="trash" class="trash-empty icon" data-label="Recycle Bin"></div>
+  </div>
+  <div id="task-bar">
+    <div id="blur-overlay"></div>
+    <div id="menu-button"></div>
+    <div id="pined-items">
+      <div id="iexplore" class="pined-icon iexplore"></div>
+    </div>
+    <div id="datetime">
+      <span class="time"></span>
+      <span class="date"></span>
+    </div>
+    <div id="show-desktop"></div>
+  </div>
+  
+  
+  <div class="window glass active has-scrollbar" id="table_frame" style="width: 60%;display: block;position: absolute;z-index: 10;">
+    <div class="title-bar">
+      <div class="title-bar-text">User Table</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body has-space" style="height: 560px;">
+      <h4 style="margin: 0; margin-bottom: 10px;">Employee Details</h4>
+      <fieldset>
+        <legend>Employee</legend>
+        <div class="field-row">
+          <label for="id" style="width: 100px;">ID: &nbsp;</label>
+          <input id="id" type="text" style="width: 80%;" />
+        </div>
+        <div class="field-row">
+          <label for="fname" style="width: 100px;">First Name: &nbsp;</label>
+          <input id="fname" type="text" style="width: 80%;"/>
+        </div>
+        <div class="field-row">
+          <label for="lname" style="width: 100px;">Last Name: &nbsp;</label>
+          <input id="lname" type="text" style="width: 80%;" />
+        </div>
+        <div class="field-row">
+          <label for="empCode" style="width: 100px;">Employee Code: &nbsp;</label>
+          <input id="empCode" type="text" style="width: 80%;" />
+        </div>
+        <div class="field-row">
+          <label for="state" style="width: 100px;">State: &nbsp;</label>
+          <select style="width: 80%;">
+            <option>5 - Incredible!</option>
+            <option>4 - Great!</option>
+            <option selected>3 - Pretty good</option>
+            <option>2 - Not so great</option>
+            <option>1 - Unfortunate</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <label for="state" style="width: 100px;">City: &nbsp;</label>
+          <select style="width: 80%;">
+            <option>5 - Incredible!</option>
+            <option>4 - Great!</option>
+            <option selected>3 - Pretty good</option>
+            <option>2 - Not so great</option>
+            <option>1 - Unfortunate</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Actions</legend>
+        <div class="field-row" style="justify-content: right;">
+          <button>Clear</button>
+          <button>Update</button>
+          <button>Submit</button>
+          <button>Refresh</button>
+        </div>
+      </fieldset>
+      <div class="has-scrollbar" style="height: 250px;overflow: auto;border-top: 1px solid #888;">
+          <table>
+            <thead class="us-table-header" style="position: sticky;top: 0;">
+              <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Employee Code</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="usTableBody"></tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="./js/data.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>
